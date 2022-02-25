@@ -20,6 +20,7 @@ class App
         $url = $this->parseURL();
 
         //setup controller
+        error_reporting(0);
         if (file_exists("../app/controllers/". $url[0] .".php")) {
             $this->controller = $url[0]; 
             unset($url[0]);
